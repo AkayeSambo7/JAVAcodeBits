@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Lab5 {
+public class SimpleOperations {
     
     //print name header
     public static String credits(String name){

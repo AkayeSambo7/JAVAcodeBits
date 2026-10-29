@@ -53,6 +53,8 @@ class CommWorker extends Employee {
             //comms calculation works if comms is more than 5000
             if (totalSales > 5000) {
                 commission = totalSales * 0.20;
+            } else {
+                
             }
 
             return 25000 + commission; //final calculation of total
@@ -161,8 +163,8 @@ class PrintSystem {
                 Employee commWorker = new CommWorker(sales);
                 
                 System.out.println("""
-                                   Basic salary = 25000.0
-                                   Commission =\s""" + (sales * 0.20) + 
+                                    Basic salary = 25000.0
+                                    Commission =\s""" + (sales > 5000 ? sales * 0.20 : 0.0) + 
                                     "\nTOTAL SALARY = " + commWorker.getIncome());
                 break;
             case 3:

@@ -138,9 +138,15 @@ class PrintSystem {
         do the calculations*/
         switch(type) {
             case 1:
-                System.out.print("\nNumber of days absent: ");
-                int absences = scan.nextInt();
-                scan.nextLine();
+                int absences = 0;
+                System.out.print("\nWith Absences (Y/N): ");
+                char hasAbsences = scan.nextLine().charAt(0);
+
+                if (hasAbsences == 'Y' || hasAbsences == 'y') {
+                    System.out.print("No of days: ");
+                    absences = scan.nextInt();
+                    scan.nextLine();
+                }
                 
                 Employee boss = new Boss(absences);
                 
